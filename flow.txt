@@ -1,0 +1,117 @@
+╔══════════════════════════════════════════════════════════════════════════════════════╗
+║                 ZASH ROBOTICS — EXPERIENCE BLUEPRINT                               ║
+║                 Classification: INTERNAL / TECHNICAL                               ║
+║                 Build Version: 9.2.4 (Sync with Footer)                             ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝
+
+────────────────────────────────────────────────────────────────────────────────────────
+[01] EXPERIENCE PHILOSOPHY
+────────────────────────────────────────────────────────────────────────────────────────
+
+This is not a website. This is a classified robotics lab interface.
+
+The user journey is designed around 3 psychological pillars:
+
+  I.  CONTROLLED REVELATION — Information is revealed through scroll, not presented
+      all at once. The user must move through the experience to unlock content.
+
+  II. MECHANICAL WEIGHT — Scrolling feels heavy and intentional. No bouncy easing.
+      No playful physics. Lenis delivers cinematic inertia.
+
+ III. TECHNICAL AUTHORITY — Every typographic choice, animation, and data point
+      communicates that ZASH is not a startup. This is precision engineering.
+
+────────────────────────────────────────────────────────────────────────────────────────
+[02] SECTION BREAKDOWN
+────────────────────────────────────────────────────────────────────────────────────────
+
+SECTION 1 — HERO
+  Component: /src/components/Hero/Hero.jsx
+  Height: 100vh (fullscreen)
+  Layout: Centered Headline + Overlayed Spline 3D Scene
+  
+  Content Stack:
+    ► "ZASH" — Ultra-massive Orbitron display, 14vw, metallic shimmer
+    ► 2-line subtext — "ZASHLY is not just a robotic brand..."
+    ► CTA: "Calculate Your Profits" + "Get Started"
+    ► Spline Scene: Metallic Sphere (vYtSZtzObj8H35GC)
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+SECTION 2 — SCROLL STORYTELLING (Canvas Frame Scrubber)
+  Component: /src/components/ScrollStory/ScrollStory.jsx
+  Height: 100vh (PINNED while user scrolls)
+  Source: JPG frames from /public/images-for-2d-scroll/
+  
+  Mechanism:
+    ► GSAP ScrollTrigger maps scroll progress to canvas frames.
+    ► Story Beats: "PRECISION ENGINEERED", "AUTONOMOUS INTELLIGENCE", etc.
+    ► Frame counter UI element.
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+SECTION 5 — FOOTER
+  Component: /src/components/Footer/Footer.jsx
+  
+  Design:
+    ► Animated grid-pulse canvas (60px cells)
+    ► SVG silver energy horizon line
+    ► Brand lockup: "CUBEX" (The standard of care)
+    ► Technical status badges and System Status links
+
+────────────────────────────────────────────────────────────────────────────────────────
+[03] ANIMATION TRIGGER MAP
+────────────────────────────────────────────────────────────────────────────────────────
+
+TRIGGER                    ANIMATION                       ENGINE
+──────────────────────────────────────────────────────────────────────────────────────
+Page load (delay 0.3s)     Hero cinematic entrance          GSAP timeline
+Scroll Y > 80px            Navbar compact morph             CSS/GSAP transition
+Section 2 pin start        Canvas frame scrub begins        GSAP ScrollTrigger
+Footer top 85%             Footer entrance + SVG line       GSAP
+
+────────────────────────────────────────────────────────────────────────────────────────
+[04] FOLDER ARCHITECTURE (VERIFIED)
+────────────────────────────────────────────────────────────────────────────────────────
+
+/
+├── src/
+│   ├── main.jsx                    ← React entry
+│   ├── App.jsx                     ← Routing + Global Layout
+│   ├── components/
+│   │   ├── Navbar/                 ← Floating pill nav
+│   │   ├── Hero/                   ← Spline + Headlines
+│   │   ├── Footer/                 ← technical footer
+│   │   └── ...
+│   ├── pages/
+│   │   ├── Home.jsx                ← Main landing
+│   │   ├── About.jsx               ← "Beyond Human" page
+│   │   ├── Solutions.jsx           ← Strategy & Ops
+│   │   └── ...
+│   └── styles/
+│       └── index.css               ← Global Design System
+├── public/
+│   └── images-for-2d-scroll/       ← Animation assets
+└── flow.txt                        ← This file
+
+────────────────────────────────────────────────────────────────────────────────────────
+[10] DEPLOYMENT PROTOCOL
+────────────────────────────────────────────────────────────────────────────────────────
+
+STEP 1: PRE-FLIGHT CHECK
+  ► Check for console.log or debug markers.
+  ► Verify Spline scene accessibility.
+  ► Ensure all local assets are in /public.
+
+STEP 2: BUILD
+  ► Command: `npm run build`
+  ► Output: /dist folder (Vite standard)
+
+STEP 3: VERIFICATION
+  ► Command: `npm run preview`
+  ► Test on mobile/tablet breakpoints.
+  ► Check asset paths in production bundle.
+
+────────────────────────────────────────────────────────────────────────────────────────
+END OF DOCUMENT
+────────────────────────────────────────────────────────────────────────────────────────
