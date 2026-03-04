@@ -82,11 +82,11 @@ export default function App() {
                     <Routes>
                         {/* Main App Routes with Navbar/Footer */}
                         <Route element={<AppLayout />}>
-                            <Route path="/" element={<Home />} />
-                            <Route path="/about" element={<About />} />
-                            <Route path="/solutions" element={<Solutions />} />
-                            <Route path="/use-cases" element={<UseCases />} />
-                            <Route path="/contact" element={<Contact />} />
+                            <Route path="ZASH-robo/" element={<Home />} />
+                            <Route path="ZASH-robo/about" element={<About />} />
+                            <Route path="ZASH-robo/solutions" element={<Solutions />} />
+                            <Route path="ZASH-robo/use-cases" element={<UseCases />} />
+                            <Route path="ZASH-robo/contact" element={<Contact />} />
                         </Route>
                         <Route path="/notfound" element={<Notfound />} />
                         <Route path="*" element={<Notfound />} />
