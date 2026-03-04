@@ -21,9 +21,10 @@ export function preloadImages(sources) {
  * @param {number} total - total number of frames
  */
 export function generateFramePaths(total = 120) {
+    const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '')
     return Array.from({ length: total }, (_, i) => {
         const num = String(i + 1).padStart(3, '0')
-        return `/images-for-2d-scroll/ezgif-frame-${num}.jpg`
+        return `${baseUrl}/images-for-2d-scroll/ezgif-frame-${num}.jpg`
     })
 }
 
