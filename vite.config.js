@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  base: '/ZASH-robo/',
+  base: '/ZASHly-automation-crypto/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -14,3 +14,5 @@ export default defineConfig({
     port: 5173
   }
 })
+
+

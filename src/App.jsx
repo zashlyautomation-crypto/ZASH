@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, useLocation, Outlet } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, useLocation, Outlet } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import Cursor from './components/Cursor/Cursor'
