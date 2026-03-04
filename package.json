@@ -1,4 +1,5 @@
 {
+  "homepage": "https://zashlyautomation-crypto.github.io/ZASH-robo",
   "name": "zash-robotics",
   "private": true,
   "version": "1.0.0",
@@ -6,7 +7,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.8",
