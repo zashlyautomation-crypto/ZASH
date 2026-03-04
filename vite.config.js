@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  base: '/ZASHly-automation-crypto/',
+  base: process.env.VERCEL ? '/' : '/ZASH/',
   plugins: [react()],
   resolve: {
     alias: {

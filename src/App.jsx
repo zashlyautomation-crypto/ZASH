@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { HashRouter as Router, Routes, Route, useLocation, Outlet } from 'react-router-dom'
+import { Routes, Route, useLocation, Outlet } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import Cursor from './components/Cursor/Cursor'
@@ -74,7 +74,7 @@ const LoadingController = ({ children }) => {
 
 export default function App() {
     return (
-        <Router>
+        <>
             <ScrollToTop />
             <LoadingController>
                 <div className="relative bg-[#000000] min-h-[100vh] w-full">
@@ -82,17 +82,17 @@ export default function App() {
                     <Routes>
                         {/* Main App Routes with Navbar/Footer */}
                         <Route element={<AppLayout />}>
-                            <Route path="ZASH-robo/" element={<Home />} />
-                            <Route path="ZASH-robo/about" element={<About />} />
-                            <Route path="ZASH-robo/solutions" element={<Solutions />} />
-                            <Route path="ZASH-robo/use-cases" element={<UseCases />} />
-                            <Route path="ZASH-robo/contact" element={<Contact />} />
+                            <Route path="/" element={<Home />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="/solutions" element={<Solutions />} />
+                            <Route path="/use-cases" element={<UseCases />} />
+                            <Route path="/contact" element={<Contact />} />
                         </Route>
                         <Route path="/notfound" element={<Notfound />} />
                         <Route path="*" element={<Notfound />} />
                     </Routes>
                 </div>
             </LoadingController>
-        </Router>
+        </>
     )
 }
